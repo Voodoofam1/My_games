@@ -3,6 +3,7 @@
 products = ["молоко", "сыр", "мороженое", "хлеб", "мясо","яйца"]
 prices = [3.26, 5.63, 3.25, 4.90, 13.23,5]
 total = 0
+box = []
 
 print("Добро пожаловать в магазин Евроопт")
 print("Наши товары: ")
@@ -15,5 +16,7 @@ while True:
         break
     index = int(choice)-1
     total += prices[index]
+    box.append(products[index])
     print("В корзину положил: ",products[index], "Сумма: ", total)
 print("Итого к оплате: ", total, "рублей")
+print("Корзина наполнена: ", box)
